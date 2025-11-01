@@ -56,6 +56,21 @@ To run tests:
 flutter test
 ```
 
+### Code generation
+If this project uses code generation (for example with `json_serializable`, `freezed`, or other builders), run the code generator before running or testing the app:
+
+```
+dart run build_runner build
+```
+
+If you prefer the Flutter wrapper or need to resolve conflicting generated files, you can run:
+
+```
+flutter pub run build_runner build --delete-conflicting-outputs
+```
+
+Rerun the command whenever you change annotated model classes or builder configuration.
+
 ---
 
 ## Build
